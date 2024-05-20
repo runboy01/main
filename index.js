@@ -92,7 +92,10 @@ app.get('/recommend', (req, res) => {
     case 'fruits':
       recommendation = 'Apple';
       break;
-    case 'vegetables':
+    case 'keyboards':
+        recommendation = 'Logitech MX Keys';
+        break;  
+      case 'vegetables':
       recommendation = 'Carrot';
       break;
     default:
@@ -100,6 +103,7 @@ app.get('/recommend', (req, res) => {
   }
   res.status(200).send({ recommendation });
 });
+
 
 app.listen(PORT, () => {
   console.log("Hosted on port " + PORT)
